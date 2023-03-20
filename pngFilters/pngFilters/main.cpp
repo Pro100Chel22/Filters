@@ -14,9 +14,9 @@ int main()
 	string format = ".png";
 	
 	vector<double> aveTimes(names.size(), 0.0);
-	int iterations = 100;
+	int iterations = 1000;
 
-	fstream file("");
+	fstream file("FileName.txt");
 
 	for (int i = 0; i < names.size(); i++) 
 	{
@@ -37,7 +37,7 @@ int main()
 			{
 				auto start = chrono::steady_clock::now();
 
-				//filterNegative(img);
+				filterNegative(img);
 				//filterNegativeVec(img);
 				//filterMedian(img, 16);
 				//filterMedianVec(img, 16);
